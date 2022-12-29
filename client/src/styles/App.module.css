@@ -1,0 +1,7 @@
+.body{
+    background-color: teal;
+}
+.form-group {
+    display: flex;
+    justify-content: space-around;
+}
