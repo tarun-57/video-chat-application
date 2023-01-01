@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
+.videos-sec {
+    font-family: "Source Sans Pro";
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+.container {
+    border: 2px solid #7D91AA;
+    border-radius: 0.5rem;
+    padding: 0 10px 10px;
+    background: #fff;
+}
+.container>p {
+    font-size: 30px;
+    margin: 10px;
+}
+.video-sec {
+    border-radius: 0.5rem;
+    width: 640px;
+    height: 480px;
+}

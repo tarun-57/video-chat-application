@@ -12,24 +12,23 @@ app.use(cors());
 
 const PORT = process.env.PORT || 5000;
 app.get("/", (req, res) => {
-    // res.send("Hello World!");
     res.sendFile(__dirname + "/index.html");
 })
 
-io.on('connection', socket => {
-    socket.emit('me', socket.id);
+io.on("connection", socket => {
+    socket.emit("me", socket.id);
     console.log(`Socket ${socket.id} connected`);
-    socket.on('disconnect', () => {
-        socket.broadcast.emit('callended');
+    socket.on("disconnect", () => {
+        socket.broadcast.emit("callEnded");
         console.log(`Socket ${socket.id} disconnected`);
     });
 
-    socket.on('calluser', ({userToCall, signalData, from, name}) => {
-        io.to('userToCall').emit('calluser', {signal: signalData, from, name});
+    socket.on("callUser", ({userToCall, signalData, from, name}) => {
+        io.to(userToCall).emit("callUser", {signal: signalData, from, name});
     });
 
-    socket.on('answercall', (data) => {
-        io.to(data.to).emit('callaccepted', data.signal);
+    socket.on("answerCall", (data) => {
+        io.to(data.to).emit("callAccepted", data.signal)
     })
 })
 
