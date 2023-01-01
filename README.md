@@ -1,6 +1,7 @@
 # video-chat-application
 
 Instructions to use:
+
     1. Clone the repo.
     2. Open two terminals; one in the repo and the other in ./client.
     3. npm i and npm start in both the terminals.
@@ -10,4 +11,5 @@ Instructions to use:
     7. There you go!
 
 Backend Deployed url: https://video-chat-server-57.netlify.app/
+
 Frontend Deployed url: https://video-chat-application-57.netlify.app/
