@@ -7,7 +7,7 @@ import styles from './styles/App.module.css';
 function App() {
   return (
     <div className={[["App"], styles["body"]].join(' ')}>
-      Video Chat
+      <div className={styles["heading"]}><h1>Video Chat</h1></div>
       <VideoPlayer />
       <Options>
         <Notifications />
